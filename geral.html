@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sppsi</title>
+    <link rel="stylesheet" href="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<style>
+    input {
+        width: 100%;
+        border-color: cornflowerblue;
+        border-radius: 5px;
+    }
+    
+    textarea {
+        border-color: cornflowerblue;
+        border-radius: 5px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .sono {
+        align-items: left;
+    }
+    
+    label {
+        display: inline-block;
+    }
+    /* The container */
+    
+    .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    /* Hide the browser's default checkbox */
+    
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    /* Create a custom checkbox */
+    
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+    }
+    /* On mouse-over, add a grey background color */
+    
+    .container:hover input~.checkmark {
+        background-color: #ccc;
+    }
+    /* When the checkbox is checked, add a blue background */
+    
+    .container input:checked~.checkmark {
+        background-color: #2196F3;
+    }
+    /* Create the checkmark/indicator (hidden when not checked) */
+    
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    /* Show the checkmark when checked */
+    
+    .container input:checked~.checkmark:after {
+        display: block;
+    }
+    /* Style the checkmark/indicator */
+    
+    .container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+</style>
+
+<body>
+
+
+    <div class="container">
+
+        <h1>ANAMNESE PSICOLOGIA</h1>
+        <hr>
+
+        <form action="#" method="post">
+            <div class="row col-md-12">
+
+                <div class="col-md-4">
+                    <label>Dados pessoais:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text " name="dados_pessoais " class="form-group ">
+                </div>
+            </div>
+            <div class="row col-md-12">
+                <div class="col-md-4">
+                    <label>Nome : </label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-group">
+                </div>
+            </div>
+
+            <div class="row col-md-12">
+                <div class="col-md-1">
+                    <label>Idade :</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-group">
+                </div>
+                <div class="col-md-1">
+                    <label>Gênero:</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-group">
+                </div>
+                <div class="col-md-1">
+                    <label>Profissão:</label>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" class="form-group">
+                </div>
+            </div>
+
+            <div class="row">
+                <label>Motivo de consulta</label>
+                <textarea name="motivo_consulta" cols="100%" rows="10"></textarea>
+            </div>
+
+            <div class="row">
+                <label>História do MC</label>
+                <textarea name="motivo_consulta" cols="100%" rows="10"></textarea>
+            </div>
+
+            <div class="container" style="margin-top: 15px; border: 1px solid black;">
+
+                <div class="row col-md-12" style="border: 1px solid black; margin: 15px; padding: 10px;">
+                    <h3>Sono</h3>
+
+                    <label class="container col-md-1">Adequado
+                        <input type="radio" name="sono" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container col-md-1">Tranquilo
+                        <input type="radio" name="sono" value="1">
+                         <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container col-md-1">Inquieto
+                            <input type="radio" name="sono" value="1">
+                            <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container col-md-6">Horas dormidas :
+                        <input  type="text" style="width: 100%;border-color: blueviolet 1px solid;">
+                    </label>
+                </div>
+
+
+                <div class="row col-md-12" style="margin:15px;border: 1px solid black">
+                    <div class="col-md-6">
+                        <h3>Dificultades para dormir :</h3>
+                        <label class="container">Dificuldade para iniciar o sono.
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                          </label>
+                        <label class="container">Acorda durante a noite.
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                          </label>
+                        <label class="container">Acordar pela manhã antes do tempo desejado e não continuar o sono.
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                          </label>
+
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <br>
+                        <label class="container">Excesso de sono.
+                                <input type="checkbox" >
+                                <span class="checkmark"></span>
+                              </label>
+                        <label class="container">Frequência de pesadelos ou terrores noturnos.
+                                <input type="checkbox" >
+                                <span class="checkmark"></span>
+                              </label>
+                        <label class="container">Caminha ou conversa enquanto dorme.
+                                <input type="checkbox" >
+                                <span class="checkmark"></span>
+                              </label>
+                    </div>
+
+                </div>
+
+                <div class="row col-md-12" style="border: 1px solid black; margin: 15px; padding: 10px;">
+                    <h3>Alimentação</h3>
+
+                    <label class="container col-md-1">Adequada
+                        <input type="radio" name="sono" value="1">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container col-md-1">Come bem
+                        <input type="radio" name="sono" value="1">
+                         <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container col-md-1">Come mal
+                            <input type="radio" name="sono" value="1">
+                            <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container col-md-6">Outro
+                        <input  type="text" style="width: 100%;border-color: blueviolet 1px solid;">
+                    </label>
+                </div>
+
+                <div class="row col-md-12" style="margin:15px;border: 1px solid black">
+                    <div class="col-md-6">
+                        <h3>Dificultades para dormir :</h3>
+                        <label class="container">Dificuldade para iniciar o sono.
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                          </label>
+                        <label class="container">Acorda durante a noite.
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                          </label>
+                        <label class="container">Acordar pela manhã antes do tempo desejado e não continuar o sono.
+                            <input type="checkbox" >
+                            <span class="checkmark"></span>
+                          </label>
+
+
+                    </div>
+
+                    <div class="col-md-6">
+                        <br>
+                        <label class="container">Excesso de sono.
+                                <input type="checkbox" >
+                                <span class="checkmark"></span>
+                              </label>
+                        <label class="container">Frequência de pesadelos ou terrores noturnos.
+                                <input type="checkbox" >
+                                <span class="checkmark"></span>
+                              </label>
+                        <label class="container">Caminha ou conversa enquanto dorme.
+                                <input type="checkbox" >
+                                <span class="checkmark"></span>
+                              </label>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+
+    </div>
+
+    </form>
+
+
+    História clinica • Sono: Sono: Adequado tranquilo inquieto. Horas dormidas: _____________ Dificuldades para dormir: Dificuldade para iniciar o sono. Acordar durante a noite. Acordar pela manhã antes do tempo desejado e não continuar o sono. Excesso de
+    sono. Frequência de pesadelos ou terrores noturnos. Caminha ou conversa enquanto dorme. • Alimentação: Alimentação: Adequada Come bem Come mal Outro: Episódios de descontrole alimentar: Sim Não. Frequência: Ingesta vária em situações de tristeza,
+    nervosismo, estresse ou ansiedade: Sim Não. Quais alimentos: ____________________________ Usou medicamentos para baixar de peso: Sim Não. Quais: Vómitos autoinduzidos: Sim Não Frequência:_____________ • Atividade física: Atividade praticada: Frequência:
+    Nível de esforço: Baixo Moderado Elevado Objetivo físico: Manter Ganhar massa muscular Perder gordura Outro: _________________________________________ Antecedentes pessoais, familiares e sociais ____________________________________________________________________
+    ____________________________________________________________________ ____________________________________________________________________ ____________________________________________________________________ ____________________________________________________________________
+    ____________________________________________________________________ ____________________________________________________________________ ____________________________________________________________________ Valoração do estado psicológico ____________________________________________________________________
+    ____________________________________________________________________ ____________________________________________________________________ Hipóteses diagnostica ____________________________________________________________________ ____________________________________________________________________
+    Objetivos terapêuticos ____________________________________________________________________ ____________________________________________________________________ ____________________________________________________________________ Plano de intervenção
+    ____________________________________________________________________ ____________________________________________________________________ ____________________________________________________________________
+
+</body>
+
+</html>
