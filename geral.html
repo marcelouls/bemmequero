@@ -13,10 +13,15 @@
 <style>
     body {
         padding: auto;
+        background-color: lightgray;
     }
     
     input {
         width: 100%;
+    }
+    
+    input[type=radio] {
+        padding: 25%;
     }
     
     textarea {
@@ -24,8 +29,11 @@
         border-radius: 5px;
     }
     
-    h1 {
+    h1,
+    h2,
+    h3 {
         text-align: center;
+        color: rgb(120, 95, 143);
     }
     
     label {
@@ -185,19 +193,21 @@
                     <label>Frecuencia : </label>
                     <input type="text">
                     <div class="row col-md-12">
-                        <label class="col-md-3">Nivel de esforço: </label>
-                        <label class="col-md-3">baixo</label><input type="radio" name="esforco " value="1 ">
-                        <label class="col-md-3">Moderado</label><input type="radio" name="esforco " value="2 ">
-                        <label class="col-md-3">Elevado</label><input type="radio" name="esforco " value="3 ">
+                        <label class="col-md-12">Nivel de esforço: </label>
+                    </div>
+                    <div class="row col-md-12">
+                        <label class="col-md-3" style="text-align: right;">baixo</label><input type="radio" name="esforco" value="1 " class="col-md-1">
+                        <label class="col-md-3" style="text-align: right;">Moderado</label><input type="radio" name="esforco" value="2 " class="col-md-1">
+                        <label class="col-md-3" style="text-align: right;">Elevado</label><input type="radio" name="esforco" value="3 " class="col-md-1">
                     </div>
                     <hr>
                     <div class="row col-md-12">
-                        <label class="col-md-2">Objetivo físico: </label>
-                        <label class="col-md-2"><input type="radio" name="objetivo " value="1">Manter</label>
-                        <label class="col-md-2"><input type="radio" name="objetivo " value="2">Ganhar massa muscular</label>
-                        <label class="col-md-2"><input type="radio" name="objetivo " value="3">Perder gordura</label>
+                        <label class="col-md-12">Objetivo físico: </label>
+                        <label class="col-md-1">Manter</label><input type="radio" name="objetivo " value="1" class="col-md-1">
+                        <label class="col-md-1">Ganhar massa muscular</label><input type="radio" name="objetivo " value="2" class="col-md-1">
+                        <label class="col-md-1">Perder gordura</label><input type="radio" name="objetivo " value="3" class="col-md-1">
                         <label class="col-md-2">Outro</label>
-                        <input type="text" class="col-md-2">
+                        <input type="text" class="col-md-4">
                     </div>
 
                 </div>
