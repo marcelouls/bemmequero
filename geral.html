@@ -16,12 +16,21 @@
         background-color: lightgray;
     }
     
-    input {
+    input[type=text] {
         width: 100%;
+        border-color: cornflowerblue;
+        border-radius: 5px;
+    }
+    
+    input[type=checkbox] {
+        background-color: brown;
+        height: 18px;
+        width: 18px;
     }
     
     input[type=radio] {
-        padding: 25%;
+        height: 20px;
+        width: 20px;
     }
     
     textarea {
@@ -31,13 +40,19 @@
     
     h1,
     h2,
-    h3 {
+    h3,
+    h6 {
         text-align: center;
         color: rgb(120, 95, 143);
     }
     
     label {
         display: inline-block;
+    }
+    
+    button {
+        margin-top: 15px;
+        margin-left: 45%;
     }
 </style>
 
@@ -48,12 +63,10 @@
         <form action="#" method="post">
             <div class="row col-md-12">
 
-                <div class="col-md-4">
-                    <label>Dados pessoais:</label>
-                </div>
-                <div class="col-md-8">
-                    <input type="text " name="dados_pessoais " class="form-group ">
-                </div>
+
+                <h3>Dados pessoais:</h3>
+
+
             </div>
             <div class="row col-md-12">
                 <div class="col-md-4">
@@ -64,151 +77,146 @@
                 </div>
             </div>
 
-            <div class="row col-md-12">
-                <div class="col-md-1">
+            <div class=" row col-md-12 ">
+                <div class="col-md-1 ">
                     <label>Idade :</label>
                 </div>
-                <div class="col-md-3">
-                    <input type="text" class="form-group">
+                <div class="col-md-3 ">
+                    <input type="text" class="form-group ">
                 </div>
-                <div class="col-md-1">
+                <div class="col-md-1 ">
                     <label>Gênero:</label>
                 </div>
-                <div class="col-md-3">
-                    <input type="text" class="form-group">
+                <div class="col-md-3 ">
+                    <input type="text" class="form-group ">
                 </div>
-                <div class="col-md-1">
+                <div class="col-md-1 ">
                     <label>Profissão:</label>
                 </div>
-                <div class="col-md-3">
-                    <input type="text" class="form-group">
+                <div class="col-md-3 ">
+                    <input type="text" class="form-group ">
                 </div>
             </div>
-            <div class="row">
+            <div class="row ">
                 <h3>Motivo de consulta</h3>
-                <textarea name="motivo_consulta" cols="100%" rows="10"></textarea>
+                <textarea name="motivo_consulta " cols="100% " rows="10"></textarea>
             </div>
-            <div class="row">
+            <div class="row ">
                 <h3>História do MC</h3>
-                <textarea name="motivo_consulta" cols="100%" rows="10"></textarea>
+                <textarea name="motivo_consulta " cols="100% " rows="10"></textarea>
             </div>
 
-            <div class="row col-md-12" style=" border: 1px solid black;">
+            <div class="row col-md-12 " style=" border: 1px solid black;">
                 <h3>Sono</h3>
-                <label class="container col-md-1">Adequado
-                        <input type="radio" name="sono" value="1">
-                        <span class="checkmark"></span>
+                <div>
+                    <label>Adequado   </label><input type="radio" name="sono" id="adequado" value="1 ">
+                    <label>Tranquilo   </label><input type="radio" name="sono" id="tranquilo" value="2 ">
+                    <label>Inquieto   </label><input type="radio" name="sono" id="Inquieto" value="3 ">
+                </div>
+                <div class="row " class="col-md-12 ">
+                    <label class="col-md-2 ">Horas dormidas :
+                        <input  type="text" class="col=md-10" style="width: 40px; ">
                     </label>
+                </div>
+                <h3>Dificultades para dormir :</h3>
+                <div class="col-md-6 ">
 
-                <label class="container col-md-1">Tranquilo
-                        <input type="radio" name="sono" value="1">
-                         <span class="checkmark"></span>
-                    </label>
-                <label class="container col-md-1">Inquieto
-                            <input type="radio" name="sono" value="1">
-                            <span class="checkmark"></span>
-                    </label>
-                <label class="container col-md-6">Horas dormidas :
-                        <input  type="text" style="width: 100%;border-color: blueviolet 1px solid;">
-                    </label>
-                <!-- </div> -->
-                <div class="col-md-6">
-                    <h3>Dificultades para dormir :</h3>
-                    <label class="container">Dificuldade para iniciar o sono.
+                    <label class="container ">Dificuldade para iniciar o sono.
                             <input type="checkbox" >
                             <span class="checkmark"></span>
                           </label>
-                    <label class="container">Acorda durante a noite.
+                    <label class="container ">Acorda durante a noite.
                             <input type="checkbox" >
                             <span class="checkmark"></span>
                           </label>
-                    <label class="container">Acordar pela manhã antes do tempo desejado e não continuar o sono.
+                    <label class="container ">Acordar pela manhã antes do tempo desejado e não continuar o sono.
                             <input type="checkbox" >
-                            <span class="checkmark"></span>
+                            <span class="checkmark "></span>
                           </label>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <br>
-                    <label class="container">Excesso de sono.
+                    <label class="container ">Excesso de sono.
                                 <input type="checkbox" >
-                                <span class="checkmark"></span>
+                                <span class="checkmark "></span>
                               </label>
-                    <label class="container">Frequência de pesadelos ou terrores noturnos.
+                    <label class="container ">Frequência de pesadelos ou terrores noturnos.
                                 <input type="checkbox" >
-                                <span class="checkmark"></span>
+                                <span class="checkmark "></span>
                               </label>
-                    <label class="container">Caminha ou conversa enquanto dorme.
+                    <label class="container ">Caminha ou conversa enquanto dorme.
                                 <input type="checkbox" >
-                                <span class="checkmark"></span>
+                                <span class="checkmark "></span>
                               </label>
                 </div>
             </div>
 
-            <div class="row col-md-12" style="border: 1px solid black">
-                <div class="col-md-12">
-                    <h3>Alimentação :</h3>
-                    <label class="container col-md-1">Adequada
-                            <input type="radio" name="come" value="1">
-                            <span class="checkmark"></span>
-                        </label>
-                    <label class="container col-md-1">Come bem
-                            <input type="radio" name="come" value="1">
-                             <span class="checkmark"></span>
-                        </label>
-                    <label class="container col-md-1">Come mal
-                                <input type="radio" name="come" value="1">
-                                <span class="checkmark"></span>
-                        </label>
-                    <label class="container col-md-6">Outro
-                            <input  type="text" style="width: 100%;border-color: blueviolet 1px solid;">
-                        </label>
+            <div class="row col-md-12 " style="border: 1px solid black ">
+
+                <h3>Alimentação :</h3>
+
+                <div>
+                    <label>Adequada   </label><input type="radio" name="esforco " id="adequada " value="1 ">
+                    <label>Come bem   </label><input type="radio" name="esforco " id="come_bem " value="2 ">
+                    <label>Come mal   </label><input type="radio" name="esforco " id="_come_mal " value="3 ">
                 </div>
-                <label class="container">Episódios de descontrole alimentar:
-                    <input type="radio" name="descontrole" value="1"><label>Sim</label>
-                <input type="radio" name="descontrolo" value="2"><label>Não</label>
+
+                <div class="row col-md-12 ">
+                    <label class="col-md-2 ">Outro </label>
+                    <input type="text" class="col-md-10 ">
+                </div>
+                <hr>
+                <label>Episódios de descontrole alimentar:
+                    <input type="radio" name="descontrole " value="1 "><label>Sim</label>
+                <input type="radio" name="descontrole " value="2 "><label>Não</label>
                 </label>
-                <label class="container">Ingesta vária em situações de tristeza,
-                            nervosismo, estresse ou ansiedade: 
-                            <input type="checkbox" >
-                            <span class="checkmark"></span>
-                          </label>
-                <label class="container">Usou medicamentos para baixar de peso:
-                            <input type="checkbox" >
-                            <span class="checkmark"></span>
-                          </label>
-                <label class="container">Vómitos autoinduzidos: 
-                            <input type="checkbox" >
-                            <span class="checkmark"></span>
-                          </label>
+                <div>
+                    <label>Ingesta vária em situações de tristeza, nervosismo, estresse ou ansiedade: </label>
+                    <input type="checkbox" name="ingesta" id="ingesta" value="1 "><br>
+                </div>
+
+
+                <div>
+                    <label>Usou medicamentos para baixar de peso: </label>
+                    <input type="checkbox" name="ingesta " id="ingesta " value="1 ">
+                </div>
+                <div>
+                    <label>Vómitos autoinduzidos:</label>
+                    <input type="checkbox" name="ingesta " id="ingesta " value="1 ">
+                </div>
+
             </div>
-            <div class="col-md-6">
+
+            <div class="col-md-6 ">
                 <br>
 
             </div>
-            <div class="row col-md-12" style="border: 1px solid black">
-                <div class="col-md-12">
+            <div class="row col-md-12 " style="border: 1px solid black ">
+                <div class="col-md-12 ">
                     <h3>Atividade física :</h3>
                     <label>Atividad practicada</label>
                     <input type="text">
                     <label>Frecuencia : </label>
                     <input type="text">
-                    <div class="row col-md-12">
-                        <label class="col-md-12">Nivel de esforço: </label>
-                    </div>
-                    <div class="row col-md-12">
-                        <label class="col-md-3" style="text-align: right;">baixo</label><input type="radio" name="esforco" value="1 " class="col-md-1">
-                        <label class="col-md-3" style="text-align: right;">Moderado</label><input type="radio" name="esforco" value="2 " class="col-md-1">
-                        <label class="col-md-3" style="text-align: right;">Elevado</label><input type="radio" name="esforco" value="3 " class="col-md-1">
-                    </div>
+
+                    <h5>Nivel de esforço: </h5>
+
+
+                    <label>baixo   </label><input type="radio" name="esforco " id="baixo " value="1 ">
+                    <label>Moderado   </label><input type="radio" name="esforco " id="moderado " value="2 ">
+                    <label>Elevado   </label><input type="radio" name="esforco " id="moderado " value="3 ">
+
                     <hr>
-                    <div class="row col-md-12">
-                        <label class="col-md-12">Objetivo físico: </label>
-                        <label class="col-md-1">Manter</label><input type="radio" name="objetivo " value="1" class="col-md-1">
-                        <label class="col-md-1">Ganhar massa muscular</label><input type="radio" name="objetivo " value="2" class="col-md-1">
-                        <label class="col-md-1">Perder gordura</label><input type="radio" name="objetivo " value="3" class="col-md-1">
-                        <label class="col-md-2">Outro</label>
-                        <input type="text" class="col-md-4">
+
+                    <h5>Objetivo físico: </h5>
+                    <label>Manter</label><input type="radio" name="objetivo " id="manter " value="1 ">
+                    <label>Ganhar massa muscular</label><input type="radio" name="objetivo " id="ganhar " value="2 ">
+                    <label>Perder gordura</label><input type="radio" name="objetivo " id="perder " value="3 "><br>
+                    <div class="row col-md-12 ">
+                        <label class="col-md-2 ">Outro</label>
+                        <input type="text" class="col-md-10 ">
                     </div>
+
 
                 </div>
             </div>
@@ -232,6 +240,8 @@
                 <h3>Plano de intervenção</h3>
                 <textarea name="motivo_consulta " cols="100% " rows="10 "></textarea>
             </div>
+
+            <button class="btn btn-lg btn-success ">Salvar</button>
         </form>
 </body>
 
